@@ -187,20 +187,20 @@ skills <- tibble::tribble(
 
 ::: {layout-ncol="2"}
 :::{}
-- {{< iconify icon-park:analysis >}} **Data Analysis** [(10+ yrs.)]{style="color: grey"}
-- {{< iconify devicon:plotly >}} **Data Science** [(8 yrs)]{style="color: grey"}
-- {{< iconify fluent:data-usage-sparkle-20-filled >}} **Data Governance** [(4 yrs.)]{style="color: grey"}
-- {{< iconify devicon:python >}} **Python** [(9 yrs.)]{style="color: grey"}
-- {{< iconify devicon:rstudio >}} **R** [(3 yrs.)]{style="color: grey"}
-- {{< iconify ri:cloud-fill >}} **Cloud** (AWS, GCP) [(1 yr. each)]{style="color: grey"}
+- {{< iconify icon-park analysis >}} **Data Analysis** [(10+ yrs.)]{style="color: grey"}
+- {{< iconify devicon plotly >}} **Data Science** [(8 yrs)]{style="color: grey"}
+- {{< iconify fluent data-usage-sparkle-20-filled >}} **Data Governance** [(4 yrs.)]{style="color: grey"}
+- {{< iconify devicon python >}} **Python** [(9 yrs.)]{style="color: grey"}
+- {{< iconify devicon rstudio >}} **R** [(3 yrs.)]{style="color: grey"}
+- {{< iconify ri cloud-fill >}} **Cloud** (AWS, GCP) [(1 yr. each)]{style="color: grey"}
 :::
 :::{}
-- {{< iconify carbon:machine-learning-model >}} **Machine Learning** [(8 yrs.)]{style="color: grey"}
+- {{< iconify carbon machine-learning-model >}} **Machine Learning** [(8 yrs.)]{style="color: grey"}
 - {{< iconify mdi github >}} **Git** [(9 yrs.)]{style="color: grey"}
-- {{< iconify skill-icons:docker >}} **Docker** [(3 yrs.)]{style="color: grey"}
+- {{< iconify skill-icons docker >}} **Docker** [(3 yrs.)]{style="color: grey"}
 - {{< iconify skill-icons latex-dark >}} **LaTeX** [(10+ yrs.)]{style="color: grey"}
 - {{< iconify logos jupyter >}} **Jupyter** [(9 yrs.)]{style="color: grey"}
-- {{< iconify simple-icons:quarto >}} **Quarto** [(2 yrs.)]{style="color: grey"}
+- {{< iconify simple-icons quarto >}} **Quarto** [(2 yrs.)]{style="color: grey"}
 :::
 :::
 
