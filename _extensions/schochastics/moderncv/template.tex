@@ -1,0 +1,121 @@
+% =========================================================================== %
+%
+% DOCUMENT DEFINITION
+%
+% =========================================================================== %
+
+\documentclass[letterpaper,10pt,final]{moderncv}
+
+% =========================================================================== %
+%
+% RESUME THEME
+%
+% Color options:
+%     black, blue (default), burgundy, green, grey, orange, purple, red
+% Style options:
+%     casual (default), classic, banking, oldstyle, fancy
+%
+% =========================================================================== %
+
+\moderncvtheme[blue]{banking}
+
+% character encoding
+\usepackage[utf8]{inputenc}		
+% \usepackage[USenglish]{isodate}
+% \usepackage{fancyhdr}
+
+% Page margins and column widths
+\usepackage[margin=0.6in]{geometry}
+\setlength{\hintscolumnwidth}{3cm}
+\usepackage{etoolbox, changepage}
+\patchcmd{\makehead}% <cmd>
+  {0.8\textwidth}% <search>
+  {\linewidth}% <replace>
+  {}{}% <success><failure>
+\let\originalrecomputecvlengths\recomputecvlengths
+  \renewcommand*{\recomputecvlengths}{%
+    \originalrecomputecvlengths%
+      \setlength{\quotewidth}{0.94\textwidth}}
+%\recomputelengths
+\usepackage[none]{hyphenat}  % Prevents hyphenation
+\usepackage{setspace} % Line spacing, if desired
+\usepackage{graphicx} % For bars
+\usepackage{multicol} % Multiple columns
+\usepackage{enumitem} % Adjust bulleted list spacing (http://ctan.org/pkg/enumitem)
+
+% Page numbers
+\nopagenumbers{}
+%.   OR
+%\usepackage{lastpage}
+%\rfoot{\addressfont\itshape\textcolor{gray}{Grossi, page \thepage\ of \pageref{LastPage}}}
+
+% Bullet spacings
+\newenvironment{wideitemize}{\itemize\addtolength{\itemsep}{3pt}}{\enditemize}
+\setlist[itemize,1]{leftmargin=*,labelindent=3mm,labelsep=3mm}
+
+% cventry spacing
+\newcommand{\cvspace}{0.6em}
+
+% Skills graphics
+% Renders a progress-bar to indicate a certain skill in percent.
+% param 1: name of the skill / tech / etc.
+% param 2: level (for example in years)
+% param 3: percent, values range from 0 to 1
+\newcommand{\cvskillbar}[3] {
+	\begin{tabular*}{1\columnwidth}{>{\raggedright\arraybackslash}p{0.72\columnwidth}  r}
+ 		\textcolor{black}{\textbf{\small{#1}}} & \textcolor{color2}{\small{#2}}
+	\end{tabular*}
+	\hspace{4pt}
+	\begin{tikzpicture}[scale=1,rounded corners=2pt,very thin]
+		\fill [lightgray] (0,0) rectangle (1\columnwidth, 0.15);
+		\fill [color1] (0,0) rectangle (#3\columnwidth, 0.15);
+  	\end{tikzpicture}%
+	 \vspace{0.5em}%
+}
+
+% Exclude cover letter
+\newif\iflong
+\longtrue % switch to false in short version
+\newcommand{\coverLetter}[1]{\iflong #1\fi}
+
+
+% Header information
+\firstname{$author.firstname$}
+\familyname{$author.lastname$}
+\title{$jobtitle$}
+% \address{$contact.address$}
+% \phone{$contact.phone$}
+\email{$contact.email$}
+\homepage{$contact.website$}
+\social[linkedin]{$contact.linkedin$}
+\extrainfo{$contact.extrainfo$}
+
+\quote{\small{$summary$}}
+
+\begin{document}
+
+% -----------------------------------     Call resume file here     ----------------------------------- %
+
+\normalsize
+\makecvtitle
+
+$body$
+
+\section{Education}
+$for(education.items)$
+$if(education.items.minor)$
+\cventry{$education.items.location$}{$education.items.institution$}{$education.items.degree$, $education.items.major$}{$education.items.date$}{$education.items.extra$}{Minor in $education.items.minor$}
+$else$
+\cventry{$education.items.location$}{$education.items.institution$}{$education.items.degree$, $education.items.major$}{$education.items.date$}{$education.items.extra$}{}
+$endif$
+$endfor$
+
+
+
+
+
+% --------------------------------------------------------------------------------------------------------- %
+
+%\end{onehalfspacing}
+\end{document}
+
