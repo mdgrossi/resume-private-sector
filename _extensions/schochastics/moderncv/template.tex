@@ -22,7 +22,7 @@
 % character encoding
 \usepackage[utf8]{inputenc}		
 % \usepackage[USenglish]{isodate}
-% \usepackage{fancyhdr}
+
 
 % Page margins and column widths
 \usepackage[margin=0.6in]{geometry}
@@ -55,6 +55,10 @@
 
 % cventry spacing
 \newcommand{\cvspace}{0.6em}
+
+% Define tightlist
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 
 % Skills graphics
 % Renders a progress-bar to indicate a certain skill in percent.
@@ -109,9 +113,6 @@ $else$
 \cventry{$education.items.location$}{$education.items.institution$}{$education.items.degree$, $education.items.major$}{$education.items.date$}{$education.items.extra$}{}
 $endif$
 $endfor$
-
-
-
 
 
 % --------------------------------------------------------------------------------------------------------- %
