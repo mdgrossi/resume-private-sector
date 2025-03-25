@@ -15,6 +15,8 @@ format:
     fig-height: 7
     theme: flatly
   moderncv-pdf: default
+  # docx: default
+
 author:
   firstname: "Matthew"
   lastname: "Grossi\\textcolor{gray}{, Ph.D.}"
@@ -120,6 +122,20 @@ p {
 }
 ```
 
+```{r}
+#| label: setup
+#| warning: false
+
+library("dplyr")
+library("tibble")
+library("flextable")
+library("ggplot2")
+
+source("scripts/r_resume_html.R")
+source("scripts/r_resume_pdf.R")
+```
+
+<!-- Contact info sidebar (website only) -->
 ::: {.content-visible when-format="html"}
 ::: {.column-margin .right-align}
 
@@ -136,22 +152,7 @@ p {
 [ResearchGate](https://www.researchgate.net/profile/Matthew_Grossi2) {{< iconify simple-icons:researchgate >}}
 
 :::
-:::
-
-```{r}
-#| label: setup
-#| warning: false
-
-library("dplyr")
-library("tibble")
-library("flextable")
-library("ggplot2")
-
-source("scripts/r_resume_html.R")
-source("scripts/r_resume_pdf.R")
-```
-
-::: {.content-visible when-format="html"}
+<!-- Summary statement (website only) -->
 ::: {.center}
 
 <span style="color:#3873b3;"> *{{< meta summary >}}* </span>
@@ -159,27 +160,8 @@ source("scripts/r_resume_pdf.R")
 :::
 :::
 
+<!-- Skills (website only) -->
 # {{< iconify solar programming-outline >}} Skills
-
-```{r}
-#| label: Skills
-#| output: asis
-skills <- tibble::tribble(
-  ~skill, ~years, ~scale,
-  "Data Analysis", "10+ yrs.", "1",
-  "Data Science", "8 yrs.", "0.8",
-  "Data Governance", "4 yrs.", "0.4",
-  "Python", "9 yrs.", "0.9",
-  "R", "3 yrs.", "0.3",
-  "Cloud (AWS, GCP)", "1 yr. each", "0.1",
-  "Machine Learning", "8 yrs.", "0.8",
-  "Git", "9 yrs.", "0.9",
-  "Docker", "3 yrs.", "0.3",
-  "\\LaTeX", "10+ yrs.", "1",
-  "Jupyter", "9 yrs.", "0.9",
-  "Quarto", "2 yrs.", "0.2"
-  )
-```
 
 :::: {.content-visible when-format="html"}
 
@@ -220,7 +202,28 @@ skills <- tibble::tribble(
 :::
 ::::
 
-:::: {.content-visible when-format="pdf"}
+<!-- Skills (pdf only) -->
+::: {.content-visible when-format="pdf"}
+
+```{r}
+#| label: Skills
+#| output: asis
+skills <- tibble::tribble(
+  ~skill, ~years, ~scale,
+  "Data Analysis", "10+ yrs.", "1",
+  "Data Science", "8 yrs.", "0.8",
+  "Data Governance", "4 yrs.", "0.4",
+  "Python", "9 yrs.", "0.9",
+  "R", "3 yrs.", "0.3",
+  "Cloud (AWS, GCP)", "1 yr. each", "0.1",
+  "Machine Learning", "8 yrs.", "0.8",
+  "Git", "9 yrs.", "0.9",
+  "Docker", "3 yrs.", "0.3",
+  "\\LaTeX", "10+ yrs.", "1",
+  "Jupyter", "9 yrs.", "0.9",
+  "Quarto", "2 yrs.", "0.2"
+  )
+```
 
 ```{r}
 #| output: asis
@@ -234,8 +237,9 @@ cvsoftskills(skills = softskills)
 
 ```
 
-::::
+:::
 
+<!-- Experience -->
 # {{< iconify ic baseline-work >}} Professional Experience
 
 ```{r, fig.height=0.1, fig.width=10}
@@ -284,6 +288,7 @@ cvevents(tbl = experience, when = "dates", what = "role", where = "institution",
 
 ```
 
+<!-- Experience (website only) -->
 ::: {.content-visible when-format="html"}
 ```{r}
 
@@ -318,6 +323,7 @@ exp_pro(tbl = experience[6,], date = "dates", job = "role", employer = "institut
 
 ```
 
+<!-- Education -->
 # {{< iconify zondicons education >}} Education
 
 ```{r}
@@ -343,3 +349,35 @@ exp_school(degree = "B.S., Physical Oceanography\nMinor in Meteorology",
 
 :::
 
+<!-- Awards -->
+# {{< iconify hugeicons star-award-01 >}} Awards
+
+- Three annual performance awards, and three impromptu performance awards, and six "shout out" recognitions of appreciation (2022-2024, NOAA)
+- Rosenstiel School of Marine and Atmospheric Science TA Excellence Award (2019, University of Miami)
+- Gulf of Mexico Research Initiative Scholar (2019, University of Miami)
+- University of Miami Center for Computational Science Graduate Fellow (2018, University of Miami)
+- Oceanography Fellow (2008, University of Delaware)
+- Eagle Scout
+
+<!-- Publications -->
+# {{< iconify fxemoji newspaper >}} Publications
+
+## Peer Reviewed Publications
+
+- (*under review*) **Grossi, M.D.** *et al.* Drifter prediction using neural networks
+- **Grossi, M.D.** , T.M. &Ouml;zg&ouml;kmen, M. Kubat (2020) Predicting particle trajectories in oceanic flows using artificial neural networks,
+*Ocean Modelling*, 156, 101707.
+- Geiger, E.F., **M.D. Grossi**, A.C. Trembanis, J.T. Kohut, M.J. Oliver (2011) Satellite-Derived Coastal Ocean and Estuarine Salinity in the Mid-Atlantic, *Continental Shelf Research*, doi:10.1016/j.csr.2011.12.001.
+
+## Conference Proceedings
+
+- Shah, C, M.M. Nabi, S.Y. Alaba, M.D. Campbell, R. Caillouet, **M.D. Grossi**, J.E. Ball, and R. Moorhead (2025) YOLOv8-TF:
+Transformer-Enhanced YOLOv8 for Underwater Fish Species Recognition with Class Imbalance Handling, *Sensors*, 25, 1846, doi:10.3390/s25061846.
+- Shah, C., M.M. Nabi, S.Y. Alaba, R. Caillouet, J. Prior, M. Campbell, **M.D. Grossi**, F. Wallace, J.E. Ball, and R. Moorhead (2024) Active detection for fish species recognition in underwater environments, Proc. SPIE 13061, Ocean Sensing and Monitoring XVI, 130610D, 6 June 2024, https://doi.org/10.1117/12.3013344.
+- Alaba, S.Y., J.H. Prior, C. Shah, M.M. Nabi, J.E. Ball, R. Moorhead, M.D. Campbell, F. Wallace, and **M.D. Grossi** (2024) Multifish tracking for marine biodiversity monitoring, Proc. SPIE 13061, Ocean Sensing and Monitoring XVI, 130610E, 6 June 2024, https://doi.org/10.1117/12.3013503.
+
+## Technical Reports (not peer reviewed)
+
+- **Grossi, M.D.**, M. Monim, A. Gangopadhyay (2017) Global Climate Patterns: An Overview of Arctic Oscillation, Pacific Decadal Oscillation, Pacific/North American Pattern, and El Ni&ntilde;o Southern Oscillation, University of Massachusetts Dartmouth School for Marine Science and Technology Technical Report SMAST-17-0401, doi:10.13140/RG.2.2.34586.44480.
+- W.S. Brown and **M. Grossi** (2016) Pre- and Post-Mission-6 Glider CTD Comparison Measurements: 11 June and 22 July 2015, University of Massachusetts Dartmouth School for Marine Science and Technology Technical Report SMAST-16-0501.
+- W.S. Brown and **M. Grossi** (2015) Pre- and Post-Mission Glider CTD Comparison Measurements: 19 June 2014 and 6 February 2015, University of Massachusetts Dartmouth School for Marine Science and Technology Technical Report SMAST-15-06-01.
