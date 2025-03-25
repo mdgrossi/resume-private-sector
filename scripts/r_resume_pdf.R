@@ -62,3 +62,11 @@ cvedu <- function(tbl, where, institution, degree, when, extra1=NA, extra2=NA) {
     cat(res, sep = "\n\n\n")
 }
 
+cvaward <- function(tbl, award){
+
+    res <- paste0(
+        "\\cvlistitem", "{", tbl[[award]], "}"
+    )
+
+    cat(res, sep = "\n\n\n")
+}

@@ -3,7 +3,7 @@
 
 This repository contains my professional private sector r&#232;sum&#232; rendered in both `pdf` and `html` formats.
 
-The `pdf` version is a custom Quarto implementation of the LaTeX [moderncv](https://ctan.org/pkg/moderncv) template. The implementation is derived from the [modern2-cv](https://github.com/schochastics/modern-cv) template by [schochastics](https://github.com/schochastics). It is by no means a full implementation of this template; not even close. It only implements the features and customizations I needed for my particular project.
+The `pdf` version is a custom Quarto implementation of the LaTeX [moderncv](https://ctan.org/pkg/moderncv) template. The implementation is derived from the [modern2-cv](https://github.com/schochastics/modern2-cv) template by [schochastics](https://github.com/schochastics). It is by no means a full implementation of this template; not even close. It only implements the features and customizations I needed for my particular project.
 
 The `html` rendering supports integeration with my [portfolio website](https://mdgrossi.github.io). It is heavily inspired by and based upon this [quarto-resume](https://github.com/busemorose/resume_quarto) by user [busemorose](https://github.com/busemorose).
 

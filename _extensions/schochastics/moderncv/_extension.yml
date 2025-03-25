@@ -7,7 +7,7 @@ contributes:
     pdf:
       filters:
         - styles.lua
+        - para.lua
       template-partials:
         - partials/biblio.tex
       template: template.tex
-
