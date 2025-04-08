@@ -1,0 +1,151 @@
+title: Matthew Grossi, Ph.D.
+subtitle: Oceanographer | Data Scientist
+author:
+  firstname: "Matthew"
+  lastname: "Grossi\\textcolor{gray}{, Ph.D.}"
+contact:
+  email: "matt.grossi@proton.me"
+  website: "mdgrossi.github.io"
+  linkedin: "matthewgrossi"
+  extrainfo: "Desired Locations: Remote; Carteret County, NC"
+jobtitle: "Data Scientist"
+summary: "Oceanographer and data scientist with 14 years experience conducting high risk/high reward research, developing machine learning solutions to complex problems, and leading diverse interdisciplinary technical teams, including 4 years of supporting innovation within federal science mission programs. Demonstrated dependability, dedication, resourcefulness, and organizational and leadership skills. Passionate about using science and innovation to develop data-driven solutions for ocean conservation and resource management."
+education:
+  items:
+    - degree: Doctor of Philosophy
+      major: Meteorology and Physical Oceanography
+      institution: University of Miami
+      location: Coral Gables, FL
+      date: 2021
+      extra: award of academic merit
+    - degree: Master of Science
+      major: Oceanography
+      institution: University of Delaware
+      location: Newark, DE
+      date: 2010
+    - degree: Bachelor of Science
+      major: Physical Oceanography
+      institution: Florida Institute of Technology
+      location: Melbourne, FL
+      date: 2008
+      minor: Meteorology
+      extra: cum laude
+skills:
+  ncol: 4
+  items:
+    - skill: Data Analysis
+      years: 10+ yrs.
+      scale: 1
+    - skill: Data Science
+      years: 8 yrs.
+      scale: 0.8 
+    - skill: Data Governance
+      years: 4 yrs.
+      scale: 0.4 
+    - skill: Python
+      years: 9 yrs.
+      scale: 0.9 
+    - skill: R
+      years: 3 yrs.
+      scale: 0.3 
+    - skill: Cloud (AWS, GCP)
+      years: 1 yr. each
+      scale: 0.1
+    - skill: Machine Learning
+      years: 8 yrs.
+      scale: 0.8
+    - skill: Git
+      years: 9 yrs.
+      scale: 0.9
+    - skill: Docker
+      years: 3 yrs.
+      scale: 0.3
+    - skill: \LaTeX
+      years: 10+ yrs.
+      scale: 1
+    - skill: Jupyter
+      years: 9 yrs.
+      scale: 0.9
+    - skill: Quarto
+      years: 2 yrs.
+      scale: 0.2
+  softskills: critical thinking, strategic thinking, innovative problem solving, results-driven, detail-oriented, team player
+experience:
+  items:
+    - role: Data Scientist
+      employer: National Oceanic and Atmospheric Administration
+      extra: Southeast Fisheries Science Center (SEFSC)
+      dates: Jan 2023--present
+      details: |
+        * Overseeing the development and deployment of computer vision machine learning algorithms to automate object detection, tracking, species identification, and fish aging from images and stereo video by bridging multidisciplinary federal, academic, and industry partners and spearheading transition planning within the SEFSC. Awarded $80k to operationalize these models to increase data processing efficiency by up to 50%, reduce manual processing time by up to 90%, and save over $0.5M annually.
+        * Leading a 3-year $768k collaborative initiative across five Divisions to bridge scientists, data users, and IT to modernize SEFSC data infrastructure and address bottlenecks through consolidation and data warehousing strategies aligned with FAIR data principles and data governance best practices (competitive funding award).
+        * Collaborating across six regional Science Centers to replace siloed data management practices with national solutions to common problems, streamline data pipelines, and minimize duplicated technological efforts. Stood up GCP cloud-based high-performance video analysis system to scale up data processing capabilities of 30 TB (1000 hrs) of annual underwater survey video data. Stood up cloud storage to enable public data access (GCP).
+        * Leading Center-wide initiative to encourage innovation by documenting and implementing best practices (*e.g.*, data governance), championing open science (*e.g.*, GitHub, Quarto, Jupyter notebooks), and providing technical expertise and training in Python and machine learning.
+    - role: Uncrewed Systems Data Coordinator
+      extra: National Centers for Environmental Information (NCEI)
+      dates: Aug 2021--Jan 2023
+      details: |
+        * Developed and documented a cloud-optimized on-demand data pipeline in AWS, reducing the data ingest-to-archive timeline from months to minutes. Demonstrated to Leadership cost, computation, and scalability benefits of cloud computing for data processing and storage by comparing lift-and-shift to refactored cloud migration methods and netCDF to Zarr data formats.
+        * Established a collaborative relationship between NCEI, another NOAA program office, and external partners to resolve long-standing data archival issues by leading the implementation of metadata standardization and controlled vocabularies. Implemented the archival of delayed-mode ocean glider data for the first time, increasing public access to glider data by several-fold.
+        * Collaborated with the Navy to define metadata requirements for uncrewed systems platforms and develop joint metadata standards for data collection and dissemination leading to the development of a joint NOAA-Navy metadata schema to bolster data interoperability and streamline data sharing within the federal government.
+        * Served as NOAA federal representative and subject matter expert to Gulf Blue Navigator cohort of late-stage startup companies supporting the blue tech economy along the U.S. Gulf Coast.
+    - details: |
+        * Collaborated with the NOAA Office of Research Transition and Application to align research-to-operation transition planning with NCEI data management planning to help scientists and researchers throughout NOAA develop data management strategies commensurate with a project's Technical Readiness Level.
+    - role: Resident Assistant
+      employer: University of Miami
+      where: Coral Gables, FL
+      dates: Aug 2016--Jul 2021
+      details: |
+        * Developed computer vision neural network models in Python for predicting ocean drifter trajectories, reducing error by nearly $50\%$ over conventional regression models in many cases and at lower computational cost than theory-based models. Competitively selected as a UM Center for Computational Science Graduate Fellow in support of student-proposed interdisciplinary research.
+        * Delivered oral presentations to both technical audiences at conferences, symposiums, and science meetings and to lay audiences at outreach events, in the local community, and in underprivileged school classrooms.
+        * Participated in a 3-week multi-institutional field campaign in the Gulf of Mexico utilizing a ship, small boats, uncrewed aerial vehicles, an uncrewed underwater vehicle, and 500 surface drifters to investigate the movement of material across the shelf, into coastal waters, and onto the shore in the Louisiana Bight.
+    - role: Graduate Research Assistant
+      extra: two graduate courses
+      dates: Aug 2018--Dec 2019
+      details: |
+        * Exercised classroom management for ~20 students per class. Articulated complex material, led laboratory experiments, and provided timely constructive feedback to foster student learning and development.
+        * Taught R to 20 undergraduate students in weekly classroom sessions, bringing students with no previous coding experience to beginner-level confidence in writing scripts to solve real oceanography problems with class average homework grade 87%. Highly praised in overwhelmingly positive student feedback.
+    - role: Research Assistant
+      employer: University of Massachusetts Dartmouth
+      extra: Ocean Observation Laboratory
+      where: New Bedford, MA
+      dates: Sep 2014--Jul 2016
+      details: |
+        * Implemented $130k NOAA Mid-Atlantic Regional Association Coastal Ocean Observing System ocean monitoring and research initiative by managing autonomous underwater glider missions and high-frequency (HF) marine radar throughout southeastern New England. Demonstrated ability to successfully and simultaneously manage multiple high-priority and time-sensitive projects.
+        * Managed end-to-end operations of three glider missions in two years, surpassing the lab goal of one deployment per year.
+        * Maintained and operated four HF radar sites in the northeast region, exceeding the operational goal of having 80% of the network running 80\% of the time.
+        * Automated data flow routines and diligently documented job-related methods, best practices, and professional recommendations in internal technical reports to ensure smooth transfers of knowledge.
+        * Recruited, trained, and supervised five student workers and community volunteers in the lab and field.
+    - role: Graduate Research Assistant
+      employer: University of Delaware
+      extra: Ocean Exploration, Remote Sensing, and Biogeography Lab
+      where: Lewes, DE
+      dates: Jul 2008--Aug 2010
+      details: |
+        * Developed a novel machine learning approach in R to predict density profiles anywhere in the ocean from satellite surface observations using 300,000+ temperature-salinity profiles and ten global ocean remote sensing products using neural networks.
+        * Delivered regular demonstrations of research and data products to >1200 annual University visitors including elected officials, school groups, and community members using a state-of-the-art global data visualization display and Google Earth.
+        * Participated in week-long cruises aboard 146-foot coastal research vessel studying coastal water quality, dynamics, and primary productivity in the mid-Atlantic Bight, logging more than 80 days at sea.
+awards:
+  items:
+    - award: Three annual performance awards, and three impromptu performance awards, and six "shout out" recognitions of appreciation (2022-2024, NOAA)
+    - award: Rosenstiel School of Marine and Atmospheric Science TA Excellence Award (2019, University of Miami)
+    - award: Gulf of Mexico Research Initiative Scholar (2019, University of Miami)
+    - award: University of Miami Center for Computational Science Graduate Fellow (2018, University of Miami)
+    - award: Oceanography Fellow (2008, University of Delaware)
+    - award: Eagle Scout
+publications:
+  peer-reviewed:
+    items:
+      - paper: "(*under review*) **Grossi, M.D.** *et al.* Drifter prediction using neural networks"
+      - paper: "**Grossi, M.D.** , T.M. &Ouml;zg&ouml;kmen, M. Kubat (2020) Predicting particle trajectories in oceanic flows using artificial neural networks, *Ocean Modelling*, 156, 101707."
+      - paper: "Geiger, E.F., **M.D. Grossi**, A.C. Trembanis, J.T. Kohut, M.J. Oliver (2011) Satellite-Derived Coastal Ocean and Estuarine Salinity in the Mid-Atlantic, *Continental Shelf Research*, doi:10.1016/j.csr.2011.12.001."
+  proceedings:
+    items:
+      - paper: "Shah, C, M.M. Nabi, S.Y. Alaba, M.D. Campbell, R. Caillouet, **M.D. Grossi**, J.E. Ball, and R. Moorhead (2025) YOLOv8-TF: Transformer-Enhanced YOLOv8 for Underwater Fish Species Recognition with Class Imbalance Handling, *Sensors*, 25, 1846, doi:10.3390/s25061846."
+      - paper: "Shah, C., M.M. Nabi, S.Y. Alaba, R. Caillouet, J. Prior, M. Campbell, **M.D. Grossi**, F. Wallace, J.E. Ball, and R. Moorhead (2024) Active detection for fish species recognition in underwater environments, Proc. SPIE 13061, Ocean Sensing and Monitoring XVI, 130610D, 6 June 2024, https://doi.org/10.1117/12.3013344."
+      - paper: "Alaba, S.Y., J.H. Prior, C. Shah, M.M. Nabi, J.E. Ball, R. Moorhead, M.D. Campbell, F. Wallace, and **M.D. Grossi** (2024) Multifish tracking for marine biodiversity monitoring, Proc. SPIE 13061, Ocean Sensing and Monitoring XVI, 130610E, 6 June 2024, \\newline https://doi.org/10.1117/12.3013503."
+  tech-reports:
+    items:
+      - paper: "**Grossi, M.D.**, M. Monim, A. Gangopadhyay (2017) Global Climate Patterns: An Overview of Arctic Oscillation, Pacific Decadal Oscillation, Pacific/North American Pattern, and El Ni&ntilde;o Southern Oscillation, University of Massachusetts Dartmouth School for Marine Science and Technology Technical Report SMAST-17-0401, doi:10.13140/RG.2.2.34586.44480."
+      - paper: "W.S. Brown and **M. Grossi** (2016) Pre- and Post-Mission-6 Glider CTD Comparison Measurements: 11 June and 22 July 2015, University of Massachusetts Dartmouth School for Marine Science and Technology Technical Report SMAST-16-0501."
+      - paper: "W.S. Brown and **M. Grossi** (2016) Pre- and Post-Mission-6 Glider CTD Comparison Measurements: 11 June and 22 July 2015, University of Massachusetts Dartmouth School for Marine Science and Technology Technical Report SMAST-16-0501."

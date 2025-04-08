@@ -1,0 +1,116 @@
+---
+format:
+  html:
+    css: style.css
+  moderncv-pdf:
+    output-file: "GrossiMD-resume"
+    output-ext: "pdf"
+  docx:
+    output-file: "GrossiMD-resume"
+    output-ext: "docx"
+---
+
+```{python}
+#| label: pysetup
+from IPython.display import Markdown
+import scripts.moderncv as cv
+import yaml
+
+with open("_content.yml", "r") as f:
+  contents = yaml.safe_load(f)
+```
+
+<!-- Header rendering for docx -->
+
+::: {.content-visible when-format="docx"}
+
+<div style="text-align: center">
+
+[Email](mailto:matt.grossi@proton.me) |  [Website](mdgrossi.github.io) | [GitHub](https://github.com/mdgrossi) | [LinkedIn](https://www.linkedin.com/in/matthewgrossi) | [ORCID](https://orcid.org/0000-0002-8550-3189) | [ResearchGate](https://www.researchgate.net/profile/Matthew_Grossi2)
+
+</div>
+
+:::
+
+<!-- Rendering for website -->
+
+::: {.content-visible when-format="html"}
+::: {.column-margin .right-align}
+
+[Email](mailto:matt.grossi@proton.me) {{< iconify fxemoji:email >}}
+
+[Website](mdgrossi.github.io) {{< iconify streamline:web >}} <br><br>
+
+[GitHub](https://github.com/mdgrossi) {{< iconify mdi:github >}}
+
+[LinkedIn](https://www.linkedin.com/in/matthewgrossi) {{< iconify skill-icons:linkedin >}}
+
+[ORCID](https://orcid.org/0000-0002-8550-3189) {{< iconify la:orcid >}}
+
+[ResearchGate](https://www.researchgate.net/profile/Matthew_Grossi2) {{< iconify simple-icons:researchgate >}}
+
+:::
+:::
+
+::: {.center}
+
+<span style="color:#3873b3;"> *{{< meta summary >}}* </span>
+
+:::
+
+<!-- Skills-->
+# {{< iconify solar programming-outline >}} Skills
+
+```{python}
+#| output: asis
+cv.mdskills(items=contents['skills']['items'], icons=True)
+display(Markdown(f'- **Soft skills:** {contents["skills"]["softskills"]}'))
+```
+
+<!-- Experience -->
+# {{< iconify ic baseline-work >}} Professional Experience
+
+```{python}
+#| output: asis
+cv.mdexperience(items=contents['experience']['items'])
+```
+
+<!-- Education -->
+# {{< iconify zondicons education >}} Education
+ 
+```{python}
+#| output: asis
+cv.mdeducation(items=contents['education']['items'])
+```
+
+<!-- Awards -->
+# {{< iconify hugeicons star-award-01 >}} Awards
+
+```{python}
+#| output: asis
+cv.mdlist(items=contents['awards']['items'])
+```
+
+<!-- Publications -->
+# {{< iconify fxemoji newspaper >}} Publications
+
+## Peer Reviewed Publications
+
+```{python}
+#| output: asis
+cv.mdlist(items=contents['publications']['peer-reviewed']['items'])
+```
+
+## Conference Proceedings
+
+```{python}
+#| output: asis
+cv.mdlist(items=contents['publications']['proceedings']['items'])
+```
+
+## Technical Reports (not peer reviewed)
+
+```{python}
+#| output: asis
+cv.mdlist(items=contents['publications']['tech-reports']['items'])
+```

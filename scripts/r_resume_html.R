@@ -66,7 +66,7 @@ html.cvsoftskills <- function(skills) {
     cat(paste0("**Soft Skills:** ", skills))
 }
 
-exp_pro <- function(tbl, employer, job, date, city, desc) {
+exp_pro <- function(tbl, employer, job, date, where, desc) {
   
   # De-LaTeXify
   tbl <- tbl %>% dplyr::mutate_all(rmlatex)
@@ -74,7 +74,7 @@ exp_pro <- function(tbl, employer, job, date, city, desc) {
 
   # List for adding subtitle
   new_row <- list()
-  jobcity <- paste(tbl[[job]], tbl[[city]], sep=", ")
+  jobcity <- paste(tbl[[job]], tbl[[where]], sep=", ")
   new_row[[tbl[[employer]]]] = jobcity
   new_row[[" "]] = tbl[[date]]
   
