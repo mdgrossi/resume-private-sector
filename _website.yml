@@ -1,0 +1,43 @@
+website:
+  title: "Matt Grossi"
+  page-footer:
+    background: "#F8F8FF"
+    left: "&copy; 2025, Matthew D. Grossi"
+    right: This page is built with [Quarto](https://quarto.org/).
+
+  navbar:
+    left:
+      - href: https://mdgrossi.github.io/
+        text: Home
+      - href: https://mdgrossi.github.io/about.html
+        text: About
+      - text: Research
+        href: https://mdgrossi.github.io/content/research.html
+        menu:
+          - text: Evaluation of RTOFS
+            href: https://mdgrossi.github.io/content/research/rtofs.html
+          - text: NPQ of phytoplankton
+            href: https://mdgrossi.github.io/content/research/npq.qmd
+          - text: Density prediction
+            href: https://mdgrossi.github.io/content/research/density-prediction.qmd
+          - text: Climate patterns
+            href: https://mdgrossi.github.io/content/research/climate-patterns.qmd
+          - text: Trajectory prediction
+            href: https://mdgrossi.github.io/content/research/trajectory-prediction.qmd
+      - text: Side Projects
+        href: https://mdgrossi.github.io/content/projects.html
+        menu:
+          - text: Local Climatologies and Records
+            href: https://mdgrossi.github.io/climatology
+          - text: Public School Performance
+            href: https://github.com/mdgrossi/schools
+          - text: COVID-19 Cases
+            href: https://mdgrossi.github.io/covid19
+      - href: https://mdgrossi.github.io/content/talks.html
+        text: Talks
+      - href: https://mdgrossi.github.io/content/teaching.html
+        text: Teaching
+      - href: https://mdgrossi.github.io/resume-private-sector/
+        text: R&egrave;sum&egrave;
+      - href: https://mdgrossi.github.io/content/Grossi_mCV.pdf
+        text: CV
