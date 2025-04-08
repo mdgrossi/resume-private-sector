@@ -8,6 +8,8 @@ format:
   docx:
     output-file: "GrossiMD-resume"
     output-ext: "docx"
+metadata-files:
+  - ./_content.yml
 ---
 
 ```{python}
@@ -39,7 +41,7 @@ with open("_content.yml", "r") as f:
 
 [Email](mailto:matt.grossi@proton.me) {{< iconify fxemoji:email >}}
 
-[Website](mdgrossi.github.io) {{< iconify streamline:web >}} <br><br>
+[Website](mdgrossi.github.io) {{< iconify streamline:web >}}
 
 [GitHub](https://github.com/mdgrossi) {{< iconify mdi:github >}}
 
@@ -62,6 +64,7 @@ with open("_content.yml", "r") as f:
 # {{< iconify solar programming-outline >}} Skills
 
 ```{python}
+#| label: skills
 #| output: asis
 cv.mdskills(items=contents['skills']['items'], icons=True)
 display(Markdown(f'- **Soft skills:** {contents["skills"]["softskills"]}'))
@@ -71,6 +74,7 @@ display(Markdown(f'- **Soft skills:** {contents["skills"]["softskills"]}'))
 # {{< iconify ic baseline-work >}} Professional Experience
 
 ```{python}
+#| label: experience
 #| output: asis
 cv.mdexperience(items=contents['experience']['items'])
 ```
@@ -79,6 +83,7 @@ cv.mdexperience(items=contents['experience']['items'])
 # {{< iconify zondicons education >}} Education
  
 ```{python}
+#| label: education
 #| output: asis
 cv.mdeducation(items=contents['education']['items'])
 ```
@@ -87,6 +92,7 @@ cv.mdeducation(items=contents['education']['items'])
 # {{< iconify hugeicons star-award-01 >}} Awards
 
 ```{python}
+#| label: awards
 #| output: asis
 cv.mdlist(items=contents['awards']['items'])
 ```
@@ -97,6 +103,7 @@ cv.mdlist(items=contents['awards']['items'])
 ## Peer Reviewed Publications
 
 ```{python}
+#| label: peer-review
 #| output: asis
 cv.mdlist(items=contents['publications']['peer-reviewed']['items'])
 ```
@@ -104,6 +111,7 @@ cv.mdlist(items=contents['publications']['peer-reviewed']['items'])
 ## Conference Proceedings
 
 ```{python}
+#| label: proceedings
 #| output: asis
 cv.mdlist(items=contents['publications']['proceedings']['items'])
 ```
@@ -111,6 +119,7 @@ cv.mdlist(items=contents['publications']['proceedings']['items'])
 ## Technical Reports (not peer reviewed)
 
 ```{python}
+#| label: techreports
 #| output: asis
 cv.mdlist(items=contents['publications']['tech-reports']['items'])
 ```
