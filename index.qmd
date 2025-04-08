@@ -41,7 +41,7 @@ with open("_content.yml", "r") as f:
 
 [Email](mailto:matt.grossi@proton.me) {{< iconify fxemoji:email >}}
 
-[Website](mdgrossi.github.io) {{< iconify streamline:web >}} <br><br>
+[Website](mdgrossi.github.io) {{< iconify streamline:web >}}
 
 [GitHub](https://github.com/mdgrossi) {{< iconify mdi:github >}}
 
