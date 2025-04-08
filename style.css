@@ -1,0 +1,78 @@
+/* Browser font: Lato */
+/* Browser font-size: 13.5pt or 18px */
+/* Browser font-color: #212529 */
+/* Browser line-height: 1.5 */
+
+/* Banner color */
+.quarto-title-banner {
+    background: #3873b3;
+  }
+  
+  /* Lower the margin around h2 */
+  h2, .h2 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Remove margin at the top of main text */
+  main {
+    margin-top: 0em;
+  }
+  
+  /* Adapt line height close (1.3) to the one of browser (1.5)*/
+  p {
+    line-height: 1.3 !important;
+  }
+  
+  /* Right align */
+  .right-align {
+    text-align: right;
+  }
+  
+  /* Remove margin at the bottom of title */
+  #title-block-header {
+    margin-block-end: 0rem;
+  }
+  
+  /* Remove meta data information (e.g. Date) */
+  #title-block-header.quarto-title-block.default .quarto-title-meta {
+    display: none;
+  }
+  
+  /* Remove toc-title */
+  #toc-title {
+    display: none;
+  }
+  
+  /* Remove references title */
+  #references {
+    display: none;
+  }
+  
+  /* Remove line of automatic reference section */
+  #quarto-appendix.default {
+    padding-top: 0em;
+    margin-top: 0em;
+    border-top: 0px solid #dee2e6;
+  }
+  
+  /* border for figures in Software section */
+  .fig-software {
+    border: #dee2e6 1px solid;
+  }
+  
+  /* center-justify text */
+  .center {
+    text-align: center
+  }
+  
+  /* borderless table */
+  table {
+    border-collapse: collapse;
+    border: none;
+  }
+
+  table td, table th {
+    border: none;
+    padding: 8px
+  }

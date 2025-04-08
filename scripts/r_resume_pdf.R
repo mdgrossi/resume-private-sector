@@ -4,10 +4,10 @@
 #
 # =============================================================================
 
-cvskills <- function(tbl, skill, years, scale, cols) {
+cvskills <- function(tbl, skill, years, scale, ncols) {
 
     colscall <- paste0(
-      "\\vspace{-1em}", "\\begin{multicols}", "{", cols, "}"
+      "\\vspace{-1em}", "\\begin{multicols}", "{", ncols, "}"
     )
     command_start <- "\\cvskillbar"
     res <- paste0(

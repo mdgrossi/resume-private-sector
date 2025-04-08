@@ -1,22 +1,11 @@
 ---
 title: Matthew Grossi, Ph.D.
 subtitle: Oceanographer | Data Scientist
-title-block-banner: true
-project:
-  execute-dir: project
 format:
   html:
-    embed-resources: true
-    smooth-scroll: true
-    code-fold: false
-    toc: true
-    toc-location: left
-    fig-width: 8
-    fig-height: 7
-    theme: flatly
+    css: style.css
   moderncv-pdf: default
-  # docx: default
-
+  docx: default
 author:
   firstname: "Matthew"
   lastname: "Grossi\\textcolor{gray}{, Ph.D.}"
@@ -24,118 +13,35 @@ contact:
   email: "matt.grossi@proton.me"
   website: "mdgrossi.github.io"
   linkedin: "matthewgrossi"
-  extrainfo: "Desired Locations: Remote; Carteret County, NC; North Carolina"
-summary: "Oceanographer and data scientist with 14 years experience conducting high risk/high reward research, developing machine learning solutions to complex problems, and leading diverse interdisciplinary technical teams, including 4 years of supporting innovation within federal science mission programs. Demonstrated dependability, dedication, resourcefulness, and organizational and leadership skills. Passionate about using science and innovation to develop data-driven solutions for ocean conservation and resource management."
-education:
-  items:
-    - degree: "Doctor of Philosophy"
-      major: "Meteorology and Physical Oceanography"
-      institution: "University of Miami"
-      location: "Coral Gables, FL"
-      date: "2021"
-      extra: "award of academic merit"
-    - degree: "Master of Science"
-      major: "Oceanography"
-      institution: "University of Delaware"
-      location: "Newark, DE"
-      date: "2010"
-    - degree: "Bachelor of Science"
-      major: "Physical Oceanography"
-      institution: "Florida Institute of Technology"
-      location: "Melbourne, FL"
-      date: "2008"
-      minor: "Meteorology"
-      extra: "cum laude"
+  extrainfo: "Desired Locations: Remote; Carteret County, NC"
 jobtitle: "Data Scientist"
-execute: 
-  echo: false
-pdf-engine: latexmk
+summary: "Oceanographer and data scientist with 14 years experience conducting high risk/high reward research, developing machine learning solutions to complex problems, and leading diverse interdisciplinary technical teams, including 4 years of supporting innovation within federal science mission programs. Demonstrated dependability, dedication, resourcefulness, and organizational and leadership skills. Passionate about using science and innovation to develop data-driven solutions for ocean conservation and resource management."
 ---
 
-```{css}
-/* Browser font: Lato */
-/* Browser font-size: 13.5pt or 18px */
-/* Browser font-color: #212529 */
-/* Browser line-height: 1.5 */
+```{python}
+#| label: pysetup
+from IPython.display import Markdown
+import scripts.moderncv as cv
+import yaml
 
-/* Banner color */
-.quarto-title-banner {
-  background: #3873b3;
-}
-
-/* Lower the margin around h2 */
-h2, .h2 {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
-/* Remove margin at the top of main text */
-main {
-  margin-top: 0em;
-}
-
-/* Adapt line height close (1.3) to the one of browser (1.5)*/
-p {
-  line-height: 1.3 !important;
-}
-
-/* Right align */
-.right-align {
-  text-align: right;
-}
-
-/* Remove margin at the bottom of title */
-#title-block-header {
-  margin-block-end: 0rem;
-}
-
-/* Remove meta data information (e.g. Date) */
-#title-block-header.quarto-title-block.default .quarto-title-meta {
-  display: none;
-}
-
-/* Remove toc-title */
-#toc-title {
-  display: none;
-}
-
-/* Remove references title */
-#references {
-  display: none;
-}
-
-/* Remove line of automatic reference section */
-#quarto-appendix.default {
-  padding-top: 0em;
-  margin-top: 0em;
-  border-top: 0px solid #dee2e6;
-}
-
-/* border for figures in Software section */
-.fig-software {
-  border: #dee2e6 1px solid;
-}
-
-/* center-justify text */
-.center {
-  text-align: center
-}
+with open("_content.yml", "r") as f:
+  contents = yaml.safe_load(f)
 ```
 
-```{r}
-#| label: setup
-#| warning: false
+<!-- Header rendering for docx -->
 
-library("dplyr")
-library("tibble")
-library("flextable")
-library("ggplot2")
+::: {.content-visible when-format="docx"}
 
-source("scripts/r_resume_html.R")
-source("scripts/r_resume_pdf.R")
-```
+<div style="text-align: center">
 
-<!-- Contact info sidebar (website only) -->
+[Email](mailto:matt.grossi@proton.me) |  [Website](mdgrossi.github.io) | [GitHub](https://github.com/mdgrossi) | [LinkedIn](https://www.linkedin.com/in/matthewgrossi) | [ORCID](https://orcid.org/0000-0002-8550-3189) | [ResearchGate](https://www.researchgate.net/profile/Matthew_Grossi2)
+
+</div>
+
+:::
+
+<!-- Rendering for website -->
+
 ::: {.content-visible when-format="html"}
 ::: {.column-margin .right-align}
 
@@ -152,232 +58,67 @@ source("scripts/r_resume_pdf.R")
 [ResearchGate](https://www.researchgate.net/profile/Matthew_Grossi2) {{< iconify simple-icons:researchgate >}}
 
 :::
-<!-- Summary statement (website only) -->
+:::
+
 ::: {.center}
 
 <span style="color:#3873b3;"> *{{< meta summary >}}* </span>
 
 :::
-:::
 
-<!-- Skills (website only) -->
+<!-- Skills-->
 # {{< iconify solar programming-outline >}} Skills
 
-:::: {.content-visible when-format="html"}
-
-### Technical Skills
-
-::: {layout-ncol="2"}
-:::{}
-- {{< iconify icon-park analysis >}} **Data Analysis** [(10+ yrs.)]{style="color: grey"}
-- {{< iconify devicon plotly >}} **Data Science** [(8 yrs)]{style="color: grey"}
-- {{< iconify fluent data-usage-sparkle-20-filled >}} **Data Governance** [(4 yrs.)]{style="color: grey"}
-- {{< iconify devicon python >}} **Python** [(9 yrs.)]{style="color: grey"}
-- {{< iconify devicon rstudio >}} **R** [(3 yrs.)]{style="color: grey"}
-- {{< iconify ri cloud-fill >}} **Cloud** (AWS, GCP) [(1 yr. each)]{style="color: grey"}
-:::
-:::{}
-- {{< iconify carbon machine-learning-model >}} **Machine Learning** [(8 yrs.)]{style="color: grey"}
-- {{< iconify mdi github >}} **Git** [(9 yrs.)]{style="color: grey"}
-- {{< iconify skill-icons docker >}} **Docker** [(3 yrs.)]{style="color: grey"}
-- {{< iconify skill-icons latex-dark >}} **LaTeX** [(10+ yrs.)]{style="color: grey"}
-- {{< iconify logos jupyter >}} **Jupyter** [(9 yrs.)]{style="color: grey"}
-- {{< iconify simple-icons quarto >}} **Quarto** [(2 yrs.)]{style="color: grey"}
-:::
-:::
-
-### Soft Skills
-
-::: {layout-ncol="2"}
-:::{}
-- Critical thinking
-- Strategic thinking
-- Innovative problem solving
-:::
-:::{}
-- Results-driven
-- Detail-oriented
-- Team player
-:::
-:::
-::::
-
-<!-- Skills (pdf only) -->
-::: {.content-visible when-format="pdf"}
-
-```{r}
-#| label: Skills
+```{python}
 #| output: asis
-skills <- tibble::tribble(
-  ~skill, ~years, ~scale,
-  "Data Analysis", "10+ yrs.", "1",
-  "Data Science", "8 yrs.", "0.8",
-  "Data Governance", "4 yrs.", "0.4",
-  "Python", "9 yrs.", "0.9",
-  "R", "3 yrs.", "0.3",
-  "Cloud (AWS, GCP)", "1 yr. each", "0.1",
-  "Machine Learning", "8 yrs.", "0.8",
-  "Git", "9 yrs.", "0.9",
-  "Docker", "3 yrs.", "0.3",
-  "\\LaTeX", "10+ yrs.", "1",
-  "Jupyter", "9 yrs.", "0.9",
-  "Quarto", "2 yrs.", "0.2"
-  )
+cv.mdskills(items=contents['skills']['items'], icons=True)
+display(Markdown(f'- **Soft skills:** {contents["skills"]["softskills"]}'))
 ```
-
-```{r}
-#| output: asis
-#| echo: false
-
-cvskills(tbl = skills, skill = "skill", years = "years", scale = "scale",
-             cols=4)
-
-softskills = "Critical and strategic thinking, innovative problem solving, results-driven, detail-oriented, team player"
-cvsoftskills(skills = softskills)
-
-```
-
-:::
 
 <!-- Experience -->
 # {{< iconify ic baseline-work >}} Professional Experience
 
-```{r, fig.height=0.1, fig.width=10}
-#| label: Professional Experience
+```{python}
 #| output: asis
-experience <- tibble::tribble(
-    ~role, ~institution, ~department, ~dates, ~details,
-    "Data Scientist", "National Oceanic and Atmospheric Administration (NOAA) \\vspace{0.5em}", "Southeast Fisheries Science Center (SEFSC)", "Jan 2023--present",
-    "* Overseeing the development and deployment of computer vision machine learning algorithms to automate object detection, tracking, species identification, and fish aging from images and stereo video by bridging multidisciplinary federal, academic, and industry partners and spearheading transition planning within the SEFSC. Awarded \\$80k to operationalize these models to increase data processing efficiency by up to 50\\%, reduce manual processing time by up to 90\\%, and save over \\$0.5M annually.
-    * Leading a 3-year \\$768k collaborative initiative across five Divisions to bridge scientists, data users, and IT to modernize SEFSC data infrastructure and address bottlenecks through consolidation and data warehousing strategies aligned with FAIR data principles and data governance best practices (competitive funding award).
-    * Collaborating across six regional Science Centers to replace siloed data management practices with national solutions to common problems, streamline data pipelines, and minimize duplicated technological efforts. Stood up GCP cloud-based high-performance video analysis system to scale up data processing capabilities of 30 TB (1000 hrs) of annual underwater survey video data. Stood up cloud storage to enable public data access (GCP).
-    * Leading Center-wide initiative to encourage innovation by documenting and implementing best practices (\\textit{e.g.}, data governance), championing open science (\\textit{e.g.}, GitHub, Quarto, Jupyter notebooks), and providing technical expertise and training in Python and machine learning.",
-
-    "Uncrewed Systems Data Coordinator", "", "National Centers for Environmental Information (NCEI)", "Aug 2021--Jan 2023",
-    "* Developed and documented a cloud-optimized on-demand data pipeline in AWS, reducing the data ingest-to-archive timeline from months to minutes. Demonstrated to Leadership cost, computation, and scalability benefits of cloud computing for data processing and storage by comparing lift-and-shift to refactored cloud migration methods and netCDF to Zarr data formats.
-    * Established a collaborative relationship between NCEI, another NOAA program office, and external partners to resolve long-standing data archival issues by leading the implementation of metadata standardization and controlled vocabularies. Implemented the archival of delayed-mode ocean glider data for the first time, increasing public access to glider data by several-fold.
-    * Collaborated with the Navy to define metadata requirements for uncrewed systems platforms and develop joint metadata standards for data collection and dissemination leading to the development of a joint NOAA-Navy metadata schema to bolster data interoperability and streamline data sharing within the federal government.
-    * Served as NOAA federal representative and subject matter expert to Gulf Blue Navigator cohort of late-stage startup companies supporting the blue tech economy along the U.S. Gulf Coast.",
-
-    "", "", "", "",
-    "* Collaborated with the NOAA Office of Research Transition and Application to align research-to-operation transition planning with NCEI data management planning to help scientists and researchers throughout NOAA develop data management strategies commensurate with a project's Technical Readiness Level.",
-
-    "Research Assistant", "University of Miami \\vspace{0.5em}", "Coral Gables, FL", "Aug 2016--Jul 2021",
-    "* Developed computer vision neural network models in Python for predicting ocean drifter trajectories, reducing error by nearly $50\\%$ over conventional regression models in many cases and at lower computational cost than theory-based models. Competitively selected as a UM Center for Computational Science Graduate Fellow in support of student-proposed interdisciplinary research. 
-    * Delivered oral presentations to both technical audiences at conferences, symposiums, and science meetings and to lay audiences at outreach events, in the local community, and in underprivileged school classrooms.
-    * Participated in a 3-week multi-institutional field campaign in the Gulf of Mexico utilizing a ship, small boats, uncrewed aerial vehicles, an uncrewed underwater vehicle, and $500$ surface drifters to investigate the movement of material across the shelf, into coastal waters, and onto the shore in the Louisiana Bight.",
-
-    "Graduate Teaching Assistant", "", "two undergraduate courses", "Aug 2018--Dec 2019",
-    "* Exercised classroom management for $\\sim$20 students per class. Articulated complex material, led laboratory experiments, and provided timely constructive feedback to foster student learning and development.
-    * Taught R to 20 undergraduate students in weekly classroom sessions, bringing students with no previous coding experience to beginner-level confidence in writing scripts to solve real oceanography problems with class average homework grade 87\\%. Highly praised in overwhelmingly positive student feedback.",
-
-    "Research Associate", "University of Massachusetts Dartmouth \\vspace{0.5em}", "New Bedford, MA", "Sep 2014--Jul 2016",
-    "* Implemented \\$130k NOAA Mid-Atlantic Regional Association Coastal Ocean Observing System ocean monitoring and research initiative by managing autonomous underwater glider missions and high-frequency (HF) marine radar throughout southeastern New England. Demonstrated ability to successfully and simultaneously manage multiple high-priority and time-sensitive projects.
-    * Managed end-to-end operations of three glider missions in two years, surpassing the lab goal of one deployment per year.
-    * Maintained and operated four HF radar sites in the northeast region, exceeding the operational goal of having 80\\% of the network running 80\\% of the time.
-    * Automated data flow routines and diligently documented job-related methods, best practices, and professional recommendations in internal technical reports to ensure smooth transfers of knowledge.
-    * Recruited, trained, and supervised five student workers and community volunteers in the lab and field.",
-
-    "Graduate Research Assistant", "University of Delaware \\vspace{0.5em}", "Lewes, DE", "Jul 2008--Aug 2010",
-    "* Developed a novel machine learning approach in R to predict density profiles anywhere in the ocean from satellite surface observations using 300,000+ temperature-salinity profiles and ten global ocean remote sensing products using neural networks.
-    * Delivered regular demonstrations of research and data products to $>$1200 annual University visitors including elected officials, school groups, and community members using a state-of-the-art global data visualization display and Google Earth.
-    * Participated in week-long cruises aboard 146-foot coastal research vessel studying coastal water quality, dynamics, and primary productivity in the mid-Atlantic Bight, logging more than 80 days at sea."
-)
-
-cvevents(tbl = experience, when = "dates", what = "role", where = "institution", city = "department", descr = "details")
-
-```
-
-<!-- Experience (website only) -->
-::: {.content-visible when-format="html"}
-```{r}
-
-# Remove PDF page breaks
-if(sum(experience['role'] == "") > 0){
-  # Index of entries with no role (indicative of a PDF page break)
-  ind <- which(experience['role'] == "")
-  
-  # There could be more than one page break, so treat each one separately
-  # Append the bullets after the page break to the entry before the page break.
-  for(i in ind){
-    experience[[i-1, "details"]] <- paste0(experience[[i-1, "details"]],
-                                           "\n    ",
-                                           experience[[i, "details"]])
-  }
-  
-  # Remove the entry after the page break
-  experience <- experience[-ind,]
-}
-
-exp_pro(tbl = experience[1,], date = "dates", job = "role", employer = "institution", city = "department", desc = "details")
-
-exp_pro(tbl = experience[2,], date = "dates", job = "role", employer = "institution", city = "department", desc = "details")
-
-exp_pro(tbl = experience[3,], date = "dates", job = "role", employer = "institution", city = "department", desc = "details")
-
-exp_pro(tbl = experience[4,], date = "dates", job = "role", employer = "institution", city = "department", desc = "details")
-
-exp_pro(tbl = experience[5,], date = "dates", job = "role", employer = "institution", city = "department", desc = "details")
-
-exp_pro(tbl = experience[6,], date = "dates", job = "role", employer = "institution", city = "department", desc = "details")
-
+cv.mdexperience(items=contents['experience']['items'])
 ```
 
 <!-- Education -->
 # {{< iconify zondicons education >}} Education
-
-```{r}
-exp_school(degree = "Ph.D., Meteorology and Physical Oceanography",
-           year = "2021",
-           school = c("University of Miami, award of academic merit"),
-           city = "Coral Gables, FL")
+ 
+```{python}
+#| output: asis
+cv.mdeducation(items=contents['education']['items'])
 ```
-
-```{r}
-exp_school(degree = "M.S., Oceanography",
-           year = "2010",
-           school = c("University of Delaware"),
-           city = "Newark, DE")
-```
-
-```{r}
-exp_school(degree = "B.S., Physical Oceanography\nMinor in Meteorology",
-           year = "2008",
-           school = c("Florida Institute of Technology, cum laude"),
-           city = "Melbourne, FL")
-```
-
-:::
 
 <!-- Awards -->
 # {{< iconify hugeicons star-award-01 >}} Awards
 
-- Three annual performance awards, and three impromptu performance awards, and six "shout out" recognitions of appreciation (2022-2024, NOAA)
-- Rosenstiel School of Marine and Atmospheric Science TA Excellence Award (2019, University of Miami)
-- Gulf of Mexico Research Initiative Scholar (2019, University of Miami)
-- University of Miami Center for Computational Science Graduate Fellow (2018, University of Miami)
-- Oceanography Fellow (2008, University of Delaware)
-- Eagle Scout
+```{python}
+#| output: asis
+cv.mdlist(items=contents['awards']['items'])
+```
 
 <!-- Publications -->
 # {{< iconify fxemoji newspaper >}} Publications
 
 ## Peer Reviewed Publications
 
-- (*under review*) **Grossi, M.D.** *et al.* Drifter prediction using neural networks
-- **Grossi, M.D.** , T.M. &Ouml;zg&ouml;kmen, M. Kubat (2020) Predicting particle trajectories in oceanic flows using artificial neural networks,
-*Ocean Modelling*, 156, 101707.
-- Geiger, E.F., **M.D. Grossi**, A.C. Trembanis, J.T. Kohut, M.J. Oliver (2011) Satellite-Derived Coastal Ocean and Estuarine Salinity in the Mid-Atlantic, *Continental Shelf Research*, doi:10.1016/j.csr.2011.12.001.
+```{python}
+#| output: asis
+cv.mdlist(items=contents['publications']['peer-reviewed']['items'])
+```
 
 ## Conference Proceedings
 
-- Shah, C, M.M. Nabi, S.Y. Alaba, M.D. Campbell, R. Caillouet, **M.D. Grossi**, J.E. Ball, and R. Moorhead (2025) YOLOv8-TF:
-Transformer-Enhanced YOLOv8 for Underwater Fish Species Recognition with Class Imbalance Handling, *Sensors*, 25, 1846, doi:10.3390/s25061846.
-- Shah, C., M.M. Nabi, S.Y. Alaba, R. Caillouet, J. Prior, M. Campbell, **M.D. Grossi**, F. Wallace, J.E. Ball, and R. Moorhead (2024) Active detection for fish species recognition in underwater environments, Proc. SPIE 13061, Ocean Sensing and Monitoring XVI, 130610D, 6 June 2024, https://doi.org/10.1117/12.3013344.
-- Alaba, S.Y., J.H. Prior, C. Shah, M.M. Nabi, J.E. Ball, R. Moorhead, M.D. Campbell, F. Wallace, and **M.D. Grossi** (2024) Multifish tracking for marine biodiversity monitoring, Proc. SPIE 13061, Ocean Sensing and Monitoring XVI, 130610E, 6 June 2024, https://doi.org/10.1117/12.3013503.
+```{python}
+#| output: asis
+cv.mdlist(items=contents['publications']['proceedings']['items'])
+```
 
 ## Technical Reports (not peer reviewed)
 
-- **Grossi, M.D.**, M. Monim, A. Gangopadhyay (2017) Global Climate Patterns: An Overview of Arctic Oscillation, Pacific Decadal Oscillation, Pacific/North American Pattern, and El Ni&ntilde;o Southern Oscillation, University of Massachusetts Dartmouth School for Marine Science and Technology Technical Report SMAST-17-0401, doi:10.13140/RG.2.2.34586.44480.
-- W.S. Brown and **M. Grossi** (2016) Pre- and Post-Mission-6 Glider CTD Comparison Measurements: 11 June and 22 July 2015, University of Massachusetts Dartmouth School for Marine Science and Technology Technical Report SMAST-16-0501.
-- W.S. Brown and **M. Grossi** (2015) Pre- and Post-Mission Glider CTD Comparison Measurements: 19 June 2014 and 6 February 2015, University of Massachusetts Dartmouth School for Marine Science and Technology Technical Report SMAST-15-06-01.
+```{python}
+#| output: asis
+cv.mdlist(items=contents['publications']['tech-reports']['items'])
+```

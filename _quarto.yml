@@ -1,0 +1,21 @@
+project:
+  execute-dir: project
+title-block-banner: true
+execute: 
+  echo: false
+pdf-engine: latexmk
+format:
+  html:
+    embed-resources: true
+    smooth-scroll: true
+    code-fold: false
+    toc: true
+    toc-location: left
+    fig-width: 8
+    fig-height: 7
+    theme: flatly
+    css: style.css
+  docx:
+    page-width: 7.5
+metadata-files:
+  - _content.yml
