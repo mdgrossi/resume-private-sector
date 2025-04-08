@@ -23,7 +23,6 @@
 \usepackage[utf8]{inputenc}		
 % \usepackage[USenglish]{isodate}
 
-
 % Page margins and column widths
 \usepackage[margin=0.6in]{geometry}
 \setlength{\hintscolumnwidth}{3cm}
@@ -49,16 +48,12 @@
 %\usepackage{lastpage}
 %\rfoot{\addressfont\itshape\textcolor{gray}{Grossi, page \thepage\ of \pageref{LastPage}}}
 
-% Bullet spacings
-\newenvironment{wideitemize}{\itemize\addtolength{\itemsep}{3pt}}{\enditemize}
-\setlist[itemize,1]{leftmargin=*,labelindent=3mm,labelsep=3mm}
-
 % cventry spacing
 \newcommand{\cvspace}{0.6em}
 
 % Define tightlist
 \providecommand{\tightlist}{%
-  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+  \setlength{\itemsep}{8pt}\setlength{\parskip}{0pt}}
 
 % Skills graphics
 % Renders a progress-bar to indicate a certain skill in percent.
@@ -103,7 +98,28 @@
 \normalsize
 \makecvtitle
 
-$body$
+
+\section{Skills}
+\vspace{-1em}
+\begin{multicols}{$skills.ncol$}
+$for(skills.items)$
+\cvskillbar{$skills.items.skill$}{$skills.items.years$}{$skills.items.scale$}
+$endfor$
+\end{multicols}
+
+$if(skills.softskills)$
+\cvitem{\textcolor{color1}{$$\triangleright$$} \hspace{0.2em} Soft Skills}{$skills.softskills$}
+\vspace{\cvspace}
+$endif$
+
+\section{Experience}
+$for(experience.items)$
+$if(experience.items.employer)$
+\cventry[\cvspace]{$experience.items.dates$}{$experience.items.role$}{$experience.items.employer$ \vspace{0.5em}}{$experience.items.where$}{$experience.items.extra$}{\vspace{0.25em} $experience.items.details$}
+$else$
+\cventry[\cvspace]{$experience.items.dates$}{$experience.items.role$}{}{$experience.items.where$}{$experience.items.extra$}{\vspace{0.25em} $experience.items.details$}
+$endif$
+$endfor$
 
 \section{Education}
 $for(education.items)$
@@ -114,6 +130,49 @@ $else$
 $endif$
 $endfor$
 
+$if(awards)$
+\section{Awards}
+\small
+\begin{itemize}
+$for(awards.items)$
+\item $awards.items.award$
+$endfor$
+\end{itemize}
+$endif$
+
+\section{References}
+Available upon request.
+
+$if(publications)$
+\section{Publications}
+$if(publications.peer-reviewed)$
+\subsection{Peer Reviewed Publications}
+\begin{itemize}
+$for(publications.peer-reviewed.items)$
+\item $publications.peer-reviewed.items.paper$
+$endfor$
+\end{itemize}
+$endif$
+
+$if(publications.proceedings)$
+\subsection{Conference Proceedings}
+\begin{itemize}
+$for(publications.proceedings.items)$
+\item $publications.proceedings.items.paper$
+$endfor$
+\end{itemize}
+$endif$
+
+$if(publications.tech-reports)$
+\subsection{Technical Reports (not peer reviewed)}
+\begin{itemize}
+$for(publications.tech-reports.items)$
+\item $publications.tech-reports.items.paper$
+$endfor$
+\end{itemize}
+$endif$
+
+$endif$
 
 % --------------------------------------------------------------------------------------------------------- %
 
