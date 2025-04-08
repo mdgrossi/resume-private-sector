@@ -38,7 +38,6 @@ RUN apt-get install -y --no-install-recommends \
 RUN curl -LO https://quarto.org/download/latest/quarto-linux-amd64.deb
 RUN gdebi --non-interactive quarto-linux-amd64.deb
 RUN quarto install extension schochastics/academicons --no-prompt
-RUN quarto install tinytex
 
 # Copy requirements into container
 COPY requirements.txt .
