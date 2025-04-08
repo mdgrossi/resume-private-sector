@@ -17,5 +17,4 @@ format:
     css: style.css
   docx:
     page-width: 7.5
-metadata-files:
-  - _content.yml
+  
