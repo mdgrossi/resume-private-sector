@@ -1,21 +1,13 @@
 ---
-title: Matthew Grossi, Ph.D.
-subtitle: Oceanographer | Data Scientist
 format:
   html:
     css: style.css
-  moderncv-pdf: default
-  docx: default
-author:
-  firstname: "Matthew"
-  lastname: "Grossi\\textcolor{gray}{, Ph.D.}"
-contact:
-  email: "matt.grossi@proton.me"
-  website: "mdgrossi.github.io"
-  linkedin: "matthewgrossi"
-  extrainfo: "Desired Locations: Remote; Carteret County, NC"
-jobtitle: "Data Scientist"
-summary: "Oceanographer and data scientist with 14 years experience conducting high risk/high reward research, developing machine learning solutions to complex problems, and leading diverse interdisciplinary technical teams, including 4 years of supporting innovation within federal science mission programs. Demonstrated dependability, dedication, resourcefulness, and organizational and leadership skills. Passionate about using science and innovation to develop data-driven solutions for ocean conservation and resource management."
+  moderncv-pdf:
+    output-file: "GrossiMD-resume"
+    output-ext: "pdf"
+  docx:
+    output-file: "GrossiMD-resume"
+    output-ext: "docx"
 ---
 
 ```{python}
