@@ -3,3 +3,4 @@
 .devcontainer/
 /.quarto/
 scripts/__pycache__/
+_site/
