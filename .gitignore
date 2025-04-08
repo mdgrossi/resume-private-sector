@@ -1,2 +1,5 @@
 .DS_Store
 *.fdb_latexmk
+.devcontainer/
+/.quarto/
+scripts/__pycache__/
