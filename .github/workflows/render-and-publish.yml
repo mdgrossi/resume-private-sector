@@ -5,15 +5,13 @@ on:
   pull_request:
 
 jobs:
-  build-deploy:
+  quarto-render-and-deploy:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
     defaults:
       run:
         shell: bash -l {0}
     steps:
-    - name: Check out repository
+    - name: Checkout repository
       uses: actions/checkout@v4
       with:
         submodules: 'true'
