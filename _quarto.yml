@@ -1,5 +1,8 @@
 project:
-  execute-dir: project
+  type: website
+  # execute-dir: project
+  preview:
+    port: 4200
 title-block-banner: true
 execute: 
   echo: false
@@ -13,8 +16,13 @@ format:
     toc-location: left
     fig-width: 8
     fig-height: 7
-    theme: flatly
+    theme:
+      # light: flatly
+      light: lumen
+      dark: darkly
     css: style.css
+    page-layout: full
   docx:
     page-width: 7.5
-  
+metadata-files:
+  - _website.yml

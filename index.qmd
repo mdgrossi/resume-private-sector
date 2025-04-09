@@ -9,7 +9,7 @@ format:
     output-file: "GrossiMD-resume"
     output-ext: "docx"
 metadata-files:
-  - ./_content.yml
+  - _content.yml
 ---
 
 ```{python}
