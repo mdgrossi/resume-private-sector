@@ -93,7 +93,7 @@ experience:
         * Collaborated with the NOAA Office of Research Transition and Application to align research-to-operation transition planning with NCEI data management planning to help scientists and researchers throughout NOAA develop data management strategies commensurate with a project's Technical Readiness Level.
     - role: Resident Assistant
       employer: University of Miami
-      where: Coral Gables, FL
+      location: Coral Gables, FL
       dates: Aug 2016--Jul 2021
       details: |
         * Developed computer vision neural network models in Python for predicting ocean drifter trajectories, reducing error by nearly $50\%$ over conventional regression models in many cases and at lower computational cost than theory-based models. Competitively selected as a UM Center for Computational Science Graduate Fellow in support of student-proposed interdisciplinary research.
@@ -108,7 +108,7 @@ experience:
     - role: Research Assistant
       employer: University of Massachusetts Dartmouth
       extra: Ocean Observation Laboratory
-      where: New Bedford, MA
+      location: New Bedford, MA
       dates: Sep 2014--Jul 2016
       details: |
         * Implemented $130k NOAA Mid-Atlantic Regional Association Coastal Ocean Observing System ocean monitoring and research initiative by managing autonomous underwater glider missions and high-frequency (HF) marine radar throughout southeastern New England. Demonstrated ability to successfully and simultaneously manage multiple high-priority and time-sensitive projects.
@@ -119,7 +119,7 @@ experience:
     - role: Graduate Research Assistant
       employer: University of Delaware
       extra: Ocean Exploration, Remote Sensing, and Biogeography Lab
-      where: Lewes, DE
+      location: Lewes, DE
       dates: Jul 2008--Aug 2010
       details: |
         * Developed a novel machine learning approach in R to predict density profiles anywhere in the ocean from satellite surface observations using 300,000+ temperature-salinity profiles and ten global ocean remote sensing products using neural networks.
